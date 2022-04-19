@@ -1,0 +1,35 @@
+@rootUrl = http://localhost:8080
+
+get {{rootUrl}}/movies
+
+###
+get {{rootUrl}}/movies/1234
+
+###
+post {{rootUrl}}/movies
+Content-Type: application/json
+
+{
+  "isbn": "756834562",
+  "title": "13 District",
+  "director": {
+    "firstname": "Pierre",
+    "lastname": "Morel"
+  }
+}
+
+###
+put {{rootUrl}}/movies/1235
+Content-Type: application/json
+
+{
+  "isbn": "346734523",
+  "title": "Sherlock",
+  "director": {
+    "firstname": "Mycroft",
+    "lastname": "Holmes"
+  }
+}
+
+###
+delete {{rootUrl}}/movies/1234
