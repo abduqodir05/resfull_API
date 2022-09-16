@@ -1,6 +1,12 @@
-@rootUrl = http://localhost:8080
+@rootUrl = http://localhost:3000
 
-get {{rootUrl}}/movies
+get {{rootUrl}}
+
+###
+get {{rootUrl}}/n2
+  
+###
+get {{rootUrl}}/search
 
 ###
 get {{rootUrl}}/movies/1234
