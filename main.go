@@ -2,31 +2,42 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
-	"strconv"
 )
 
+func formHandler(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		fmt.Fprintf(w, "parseform() err: %v", err)
+		return 	
+	}
+	fmt.Fprint(w,"POST request successful")
+	name := r.FormValue("name")
+	address := r.FormValue("address")
+	fmt.Fprintf(w,"Name =%s\n",name)
+	fmt.Fprintf(w,"Address= %s\n",address)
+}
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/hello" {
+		http.Error(w, "404 not found", http.StatusNotFound)
+		return
+	}
+	if r.Method != "GET" {
+		http.Error(w, "method isn't supported", http.StatusNotFound)
+		return
+	}
+	fmt.Fprintf(w, "Hello!")
+}
+
 func main() {
-	http.HandleFunc("/add",add)
-http.HandleFunc("/search",search)
+	fileserver := http.FileServer(http.Dir("./static"))
+	http.Handle("/", fileserver)
+	http.HandleFunc("/form", formHandler)
+	http.HandleFunc("/hello", helloHandler)
 
-	http.ListenAndServe(":3000",nil)
-}
-
-func search(res http.ResponseWriter, req *http.Request) {
-	source := req.FormValue("source")
-	q := req.FormValue("q")
-	
-	data := "/search?q=" + q + "&source=" + source
-	res.Write([]byte(data))
-}
-
-func add(res http.ResponseWriter, req *http.Request) {
-	n1 := req.FormValue("n1")
-	intN1, _ := strconv.Atoi(n1) 
-	n2 := req.FormValue("n2")
-	intN2, _ := strconv.Atoi(n2)
-
-	data := intN1 + intN2
-	res.Write([]byte(fmt.Sprint(data)))
+	fmt.Printf("Starting server at port 8080\n")
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		log.Fatal(err)
+	}
 }
