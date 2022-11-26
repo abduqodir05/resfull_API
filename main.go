@@ -1,43 +1,17 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"net/http"
-)
-
-func formHandler(w http.ResponseWriter, r *http.Request) {
-	if err := r.ParseForm(); err != nil {
-		fmt.Fprintf(w, "parseform() err: %v", err)
-		return 	
-	}
-	fmt.Fprint(w,"POST request successful")
-	name := r.FormValue("name")
-	address := r.FormValue("address")
-	fmt.Fprintf(w,"Name =%s\n",name)
-	fmt.Fprintf(w,"Address= %s\n",address)
-}
-
-func helloHandler(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Path != "/hello" {
-		http.Error(w, "404 not found", http.StatusNotFound)
-		return
-	}
-	if r.Method != "GET" {
-		http.Error(w, "method isn't supported", http.StatusNotFound)
-		return
-	}
-	fmt.Fprintf(w, "Hello!")
-}
+import "fmt"
 
 func main() {
-	fileserver := http.FileServer(http.Dir("./static"))
-	http.Handle("/", fileserver)
-	http.HandleFunc("/form", formHandler)
-	http.HandleFunc("/hello", helloHandler)
+	mybill := billgates("it's genius bill")
 
-	fmt.Printf("Starting server at port 8080\n")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
-	}
+	mybill.updateTip(10)
+
+	mybill.addItem("plov",9.99)
+	mybill.addItem("pepsi",2.99)
+	mybill.addItem("lagman",4.50)
+	mybill.addItem("ice-cream",1.49)
+	mybill.addItem("dessert",14.99)
+
+	fmt.Println(mybill.format())
 }
