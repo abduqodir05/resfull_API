@@ -1,0 +1,26 @@
+[
+  {
+    "phone" : "iphone X",
+    "price" : 350
+  },
+  {
+    "phone" : "samsung note 10",
+    "price" : 250
+  },
+  {
+    "phone" : "iphone 11",
+    "price" : 450
+  },
+  {
+    "phone" : "Xiaomi note 10",
+    "price" : 200
+  },
+  {
+    "phone" : "onePlus 10",
+    "price" : 500
+  },
+  {
+    "phone" : "Nokia 8800",
+    "price" : 100
+  }
+]

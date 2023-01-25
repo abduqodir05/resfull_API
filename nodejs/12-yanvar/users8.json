@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 0, 
+    "productName" : "huawei",
+    "cpu" : "intel core i7",
+    "ram" : "8gb",
+    "storage": "512 gb ssd",
+    "screen" : "13.9-inch, 3k",
+    "price" : 1499
+  },
+  {
+    "id" : 1, 
+    "productName" : "apple macbook pro",
+    "cpu" : " 6 core intel core i7",
+    "ram" : "16gb",
+    "storage": "1TB gb ssd",
+    "screen" : "15-inch, 3k",
+    "price" : 3199
+  }
+]

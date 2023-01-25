@@ -1,17 +1,38 @@
 package main
 
 import "fmt"
+type bill struct {
+	name   string
+	items  map[string]float64
+	tip float64
+}
 
-func main() {
-	mybill := billgates("it's genius bill")
+func newbill(assa string) bill {
+	b := bill{
+		name:   assa,
+		items:  map[string]float64{"pie": 23.3, "cake": 23.4},
+		tip: 0,
+	}
+	return b
+}
+func (b *bill) format() string {
+	fs := "Bill breakdown: \n"
+	var total float64 = 0
 
-	mybill.updateTip(10)
+	for k, v := range b.items {
+		fs += fmt.Sprintf("%-25v ...$%v \n", k+":",v)
+		total += v
+	}
+	fs += fmt.Sprintf("%-25v ...$%v\n","tip:",b.tip)
 
-	mybill.addItem("plov",9.99)
-	mybill.addItem("pepsi",2.99)
-	mybill.addItem("lagman",4.50)
-	mybill.addItem("ice-cream",1.49)
-	mybill.addItem("dessert",14.99)
+	fs += fmt.Sprintf("%-25v ...%0.2f", "total:",total+b.tip)
+	return fs
+}
 
-	fmt.Println(mybill.format())
+func (b *bill) updateTip(tip float64) {
+	b.tip = tip
+}
+
+func (b bill) addItem(name string, price float64)  {
+	b.items[name] = price
 }

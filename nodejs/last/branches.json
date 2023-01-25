@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "login": "Megawat",
+        "password": "1222",
+        "cars": [
+            {
+                "title": "Tesla model 3",
+                "price": 70000
+            },
+            {
+                "title": "BMW",
+                "price": 56000
+            }
+        ]
+    },
+    {
+        "id":2,
+        "login": "MayWay",
+        "password": "2111",
+        "cars": [
+            {
+                "title": "Lexus",
+                "price": 120000
+            },
+            {
+                "title": "Matiz",
+                "price": 4000
+            }
+        ]
+    }
+]

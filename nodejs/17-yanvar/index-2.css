@@ -1,0 +1,50 @@
+.container {
+
+  width: 100%;
+  height: 620px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.orders_box {
+  width: 32%;
+  background-color: rgba(158, 206, 254, 0.973);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.order1 {
+  border: 1px solid black;
+  height: 50%;
+  text-align: center;
+}
+.order2 {
+  border: 1px solid black;
+  height: 50%;
+  text-align: center;
+}
+li {
+  text-align: center;
+  font-size: 18px;
+  list-style-type: none;
+}
+.process {
+  border-radius: 20px;
+  border: 1px solid black;
+  width: 32%;
+  background-color: rgba(158, 206, 254, 0.973);;
+}
+.done {
+  border-radius: 20px;
+  border: 1px solid black;
+  width: 32%;
+  background-color: rgba(158, 206, 254, 0.973);;
+
+}
+button, .button1, .button2 {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin: 20px;
+}
+

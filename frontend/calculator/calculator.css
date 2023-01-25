@@ -1,0 +1,74 @@
+.container {
+  /* border: 1px solid black; */
+  width: 1100px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 40px;
+  
+}
+.bottom {
+  border: 1px solid black;
+  background-color: rgb(51, 51, 230);
+  border-radius: 6px;
+  width: 430px;
+  height:350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+h3 {
+  border: 1px solid black;
+  width: 60px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px;
+  height: 40px;
+  background-color: white;
+  vertical-align: 40px;
+  
+}
+.numbers1,
+.numbers2,
+.numbers3,
+.numbers4 {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+}
+.bottom_inside {
+  width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.reset {
+  width: 140px;
+  background-color: rgb(61, 112, 207);
+}
+.equal {
+  width: 140px;
+  background-color: red;
+}
+h3:hover {
+  background-color: deepskyblue;
+  color: red;
+}
+.input {
+  background-color: darkblue;
+  width: 1100px;
+  color: white;
+  border-radius: 6px;
+  text-align: right;
+}
+.del {
+  background-color: rgb(61, 112, 207);  
+}

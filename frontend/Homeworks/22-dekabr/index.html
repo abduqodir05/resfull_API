@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>headings</title>
+  </head>
+  <style>
+    .line1 {
+      display: flex;
+      flex-direction: column;
+      width: 230px;
+      margin: 20px 0 0 10px;
+      float: left;
+    }
+    .paragraph {
+      border: 3px solid black;
+      margin-top: 20px;
+    }
+    .headings {
+      border: 3px solid black;
+    }
+    .line2 {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      margin-left: 10px;
+      float: left;
+    }
+    .list1,
+    .list2 {
+      border: 3px solid black;
+      margin: 20px 0 0 40px;
+    }
+    .line3 {
+      display: flex;
+      flex-direction: column;
+      width: 170px;
+    }
+    .sup,
+    .sub {
+      border: 3px solid black;
+      margin: 20px 0 0 40px;
+    }
+    .list1:hover {
+      color: red;
+    }
+    .list2:hover {
+      color: grey;
+    }
+    .headings:hover {
+      color: blue;
+    }
+    .paragraph:hover {
+      color: lime;
+    }
+    .sub:hover {
+      color: purple;
+    }
+    .sup:hover {
+      color: hotpink;
+    }
+  </style>
+  <body>
+    <div class="line1">
+      <div class="headings">
+        <h1>Heading1</h1>
+        <h2>Heading2</h2>
+        <h3>Heading3</h3>
+        <h4>Heading4</h4>
+        <h5>Heading5</h5>
+        <h6>Heading6</h6>
+      </div>
+
+      <div class="paragraph">
+        <p>Paragraph</p>
+      </div>
+    </div>
+
+    <div class="line2">
+      <div class="list1">
+        <h2>An unordered HTML list</h2>
+        <ul>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ul>
+      </div>
+
+      <div class="list2">
+        <h2>An ordered HTML list</h2>
+        <ol>
+          <li>list item 1</li>
+          <li>list item 2</li>
+          <li>list item 3</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="line3">
+      <div class="sub">
+        <p>HTML<sub>subscript</sub></p>
+      </div>
+      <div class="sup">
+        <p>HTML<sup>seperscript</sup></p>
+      </div>
+    </div>
+  </body>
+</html>

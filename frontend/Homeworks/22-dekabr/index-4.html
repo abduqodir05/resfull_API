@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>private</title>
+    <link rel="icon" type="image/png" href="/1672300703937.jpg" />
+  </head>
+  <style>
+    .line1,
+    .line2,
+    .line3,
+    .line4,
+    .line5,
+    .line6,
+    .line7,
+    .line8 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    body {
+      background-color: rgb(237, 251, 251);
+    }
+    .p1 {
+      text-align: center;
+      width: 550px;
+    }
+    .line4,
+    .line5,
+    .line6,
+    .line7,
+    .line8 {
+      margin-bottom: 30px;
+    }
+    .btn {
+      width: 370px;
+      height: 1 40px;
+      background-color: rgb(211, 130, 48);
+      color: white;
+      border-radius: 8px;
+    }
+    .btn:hover {
+      color: rgb(229, 214, 199);
+    }
+    .inp1 {
+      width: 300px;
+      height: 25px;
+      border-radius: 5px;
+      box-shadow: inset 5px 5px 12px rgb(238, 226, 220);
+    }
+    h1 {
+      margin-right: 15px;
+    }
+    textarea {
+      border-radius: 8px;
+      box-shadow: inset 5px 5px 12px rgb(215, 213, 212);
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color: rgb(5, 171, 212);
+    }
+    .checkbox {
+      margin-right: 260px;
+    }
+    .label {
+      position: relative;
+      bottom: 20px;
+      right: 7px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="line1">
+        <h1>Contact Us</h1>
+      </div>
+
+      <div class="line2">
+        <p class="p1">
+          Send us message and we will get back to you as soon as possible. You
+          can also reach us by phone at (123456799)
+        </p>
+      </div>
+
+      <div class="line3">
+        <p>Looking forward to hearing from you</p>
+      </div>
+      <div class="line4">
+        <label for="name">name</label>
+        <input class="inp1" type="text" name="name" id="name" />
+      </div>
+      <div class="line5">
+        <label for="email">email</label>
+        <input class="inp1" type="email" name="email" id="email" cols="55" />
+      </div>
+
+      <div class="line6">
+        <label for="haqida">Message</label>
+        <textarea name="haqida" id="haqida" cols="55" rows="6"></textarea>
+      </div>
+      <div class="line7">
+        <input class="checkbox" type="checkbox" name="check" id="check" />
+        <label class="label" for="check"
+          >I accept the
+          <a href="https://www.linkedin.com/in/abduqodir-m-952924239/"
+            >Terms of the Service</a
+          ></label
+        >
+      </div>
+
+      <div class="line8">
+        <button class="btn" type="submit">Submit your request</button>
+      </div>
+    </div>
+  </body>
+</html>

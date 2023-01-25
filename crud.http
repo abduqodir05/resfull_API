@@ -1,41 +1,58 @@
 @rootUrl = http://localhost:8080
 
-get {{rootUrl}}
+post {{rootUrl}}/register
+Content-Type: application/json
+
+{
+  "last_name": "Watson",
+  "age": "32",
+  "password": "sherlocked"
+}
 
 ###
-get {{rootUrl}}/hello
+get {{rootUrl}}/foods  
   
 ###
-get {{rootUrl}}/form.html
+get {{rootUrl}}/users
 
 ###
 get {{rootUrl}}/movies/1234
 
 ###
-post {{rootUrl}}/movies
+post {{rootUrl}}/malumot
+Content-Type: application/json
+[
+  {
+  "id" : 01,
+  "month": "September",
+  "amount": 450000
+},
+{
+  "id" : 02,
+  "month": "May",
+  "amount": 210000
+},
+{
+  "id" : 03,
+  "month": "July",
+  "amount": 3100000
+}
+]
+ 
+###
+put {{rootUrl}}/expenses
 Content-Type: application/json
 
 {
-  "isbn": "756834562",
-  "title": "13 District",
-  "director": {
-    "firstname": "Pierre",
-    "lastname": "Morel"
-  }
+  "id": 1,
+  "name": "Anvar",
+  "password": 1222 
 }
 
 ###
-put {{rootUrl}}/movies/1235
-Content-Type: application/json
-
-{
-  "isbn": "346734523",
-  "title": "Sherlock",
-  "director": {
-    "firstname": "Mycroft",
-    "lastname": "Holmes"
+delete {{rootUrl}}/expenses
+  {
+    "id": "i9i",
+    "month": "Nokia 8800",
+    "amount": 200
   }
-}
-
-###
-delete {{rootUrl}}/movies/1234

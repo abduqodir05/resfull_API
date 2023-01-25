@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Lavash",
+        "price": 26000
+    },
+    {
+        "id": 2,
+        "title": "Klab",
+        "price": 26000
+    },
+    {
+        "id": 3,
+        "title": "Burger",
+        "price": 22000
+    },
+    {
+        "id": 4,
+        "title": "HotDog",
+        "price": 15000
+    },
+    {
+        "id": 5,
+        "title": "Nagets",
+        "price": 15000
+    },
+    {
+        "id": 6,
+        "title": "Sendvich",
+        "price": 20000
+    },
+    {
+        "id": 7,
+        "title": "Ketchup",
+        "price": 2000
+    },
+    {
+        "id": 8,
+        "title": "Donar",
+        "price": 25000
+    }
+]
